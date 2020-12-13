@@ -1,0 +1,32 @@
+export default {
+  initialState: {
+    id: '',
+    name: '',
+    color: 'indigo',
+    reminders: [],
+    isShared: false,
+    isPublic: false,
+    createdAt: null,
+    updatedAt: null
+  },
+  colorList: [
+    { name: 'red', dark: '#ef9a9a', light: '#e53935' },
+    { name: 'pink', dark: '#f48fb1', light: '#d81b60' },
+    { name: 'purple', dark: '#ce93d8', light: '#8e24aa' },
+    { name: 'deep purple', dark: '#b39ddb', light: '#5e35b1' },
+    { name: 'indigo', dark: '#9fa8da', light: '#3949ab' },
+    { name: 'blue', dark: '#90caf9', light: '#1e88e5' },
+    { name: 'light blue', dark: '#81d4fa', light: '#039be5' },
+    { name: 'cyan', dark: '#80deea', light: '#00acc1' },
+    { name: 'teal', dark: '#80cbc4', light: '#00897b' },
+    { name: 'green', dark: '#a5d6a7', light: '#43a047' },
+    { name: 'light green', dark: '#c5e1a5', light: '#7cb342' },
+    { name: 'lime', dark: '#e6ee9c', light: '#c0ca33' },
+    { name: 'yellow', dark: '#fff59d', light: '#fdd835' },
+    { name: 'amber', dark: '#ffe082', light: '#ffb300' },
+    { name: 'orange', dark: '#ffcc80', light: '#fb8c00' },
+    { name: 'deep orange', dark: '#ffab91', light: '#f4511e' },
+    { name: 'brown', dark: '#bcaaa4', light: '#6d4c41' },
+    { name: 'blue grey', dark: '#b0bec5', light: '#546e7a' },
+  ],
+};

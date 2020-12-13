@@ -1,0 +1,37 @@
+@import "bloben-common/globals/theme.scss";
+
+.calendar-content__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-content__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 0.5px solid $GRAY_200 !important;
+}
+
+.calendar-content {
+  padding: 8px 24px 8px 24px !important;
+
+  //height: 100% !important;
+  font-size: 1.2rem !important;
+  //font-weight: bold !important;
+  //@media (max-width: 750px) {
+  //  padding: 10px 0 10px !important;
+  //}
+}
+
+.calendar-content__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  width: 100%;
+}
+
+.calendar-content-svg {
+  width: 1.8rem;
+  margin-right: 12px;
+}

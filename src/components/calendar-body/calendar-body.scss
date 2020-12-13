@@ -1,0 +1,30 @@
+@import "bloben-common/globals/theme.scss";
+
+.full-screen {
+  height: 100%;
+  width: 100%;
+}
+
+.calendar-body__wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.calendar-animation {
+  animation-name: event-load;
+  animation-duration: 1s;
+}
+@keyframes event-load {
+  0% {
+    right: -1500px;
+  }
+  100% {
+    right: 0;
+  }
+}

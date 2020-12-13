@@ -1,0 +1,38 @@
+@import "bloben-common/globals/theme.scss";
+
+
+.header_calendar_buttons__container {
+  border-radius: 8px;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  background-color: $GRAY_300;
+  width: auto;
+  //box-shadow: 0 5px 5px -5px #333;
+}
+
+.header_calendar_button {
+  background: $GRAY_300 !important;
+  border: $GRAY_300 solid 0.5px !important;
+  width: 75px !important;
+  display: flex !important;
+  border-radius: 8px !important;
+}
+
+.header_calendar_button-selected {
+  @extend .header_calendar_button;
+  background: $SURFACE_LIGHT !important;
+}
+
+.header_calendar_button-text {
+  padding: 0 10px 0 10px !important;
+  color: $GRAY_800 !important;
+}
+
+.header_calendar_button-text-selected {
+  @extend .header_calendar_button-text;
+  color: $PRIMARY_LIGHT !important;
+}

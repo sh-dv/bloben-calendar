@@ -1,0 +1,147 @@
+@import "bloben-common/globals/theme.scss";
+
+$month_view__width: 100%/7;
+$month_view__height: 100%/6;
+
+$box_shadow--bottom: inset 0px -1px 1px;
+$box_shadow--bottom--right  : inset -1px -1px 0px;
+$box_shadow--right: inset -1px 0px 0px;
+
+.month_view__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.month_view__container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  align-self: stretch;
+  padding: 0;
+  margin: 0;
+}
+
+.month_view__border {
+  width: $month_view__width;
+  height: $month_view__height;
+  padding: 0;
+  margin: 0;
+}
+.month_view__border--bottom--right {
+  @extend .month_view__border;
+  box-shadow: $box_shadow--bottom--right $borderLight;
+  -moz-box-shadow: $box_shadow--bottom--right $borderLight;
+  -webkit-box-shadow: $box_shadow--bottom--right $borderLight;
+}
+.month_view__border--bottom {
+  @extend .month_view__border;
+  box-shadow: $box_shadow--bottom $borderLight;
+  -moz-box-shadow: $box_shadow--bottom--right $borderLight;
+  -webkit-box-shadow: $box_shadow--bottom--right $borderLight;
+}
+.month_view__border--right {
+  @extend .month_view__border;
+  box-shadow: $box_shadow--right $borderLight;
+  -moz-box-shadow: $box_shadow--bottom--right $borderLight;
+  -webkit-box-shadow: $box_shadow--bottom--right $borderLight;
+}
+.month_view__border--bottom--right--dark {
+  @extend .month_view__border;
+  box-shadow: $box_shadow--bottom--right $borderLightDark;
+  -moz-box-shadow: $box_shadow--bottom--right $borderLightDark;
+  -webkit-box-shadow: $box_shadow--bottom--right $borderLightDark;
+}
+.month_view__border--bottom--dark {
+  @extend .month_view__border;
+  box-shadow: $box_shadow--bottom $borderLightDark;
+  -moz-box-shadow: $box_shadow--bottom--right $borderLightDark;
+  -webkit-box-shadow: $box_shadow--bottom--right $borderLightDark;
+}
+.month_view__border--right--dark {
+  @extend .month_view__border;
+  box-shadow: $box_shadow--right $borderLightDark;
+  -moz-box-shadow: $box_shadow--bottom--right $borderLightDark;
+  -webkit-box-shadow: $box_shadow--bottom--right $borderLightDark;
+}
+
+.month_view__wrapper--header {
+  height: 50px;
+  width: 100%;
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1);
+}
+.month_view__wrapper--header--dark {
+  @extend .month_view__wrapper--header;
+  box-shadow: none;
+  background-color: $modalDark;
+}
+.month_view__row--header {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+.month_view__col--header {
+  align-self: center;
+  width: $month_view__width;
+}
+.month_view__text--header {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
+  color: $gray;
+  align-self: center;
+  text-align: center;
+}
+.month_view__text--header--dark {
+  @extend .month_view__text--header;
+  color: $grayDark;
+}
+
+
+.month__day {
+  font-size: 1rem;
+  padding: 0;
+  margin: 0;
+  color: $GRAY_900;
+}
+.month__day-dark {
+  @extend .month__day;
+  color: $GRAY_300;
+}
+.month__day-disabled {
+  @extend .month__day;
+  color: $GRAY_200;
+}
+.month__day-past {
+  @extend .month__day;
+  color: $GRAY_400;
+}
+.month__day-past-dark {
+  @extend .month__day-past;
+  color: $GRAY_600;
+}
+
+.month__day-today {
+  @extend .month__day;
+  color: $textDark;
+}
+.month__day-today-dark {
+  @extend .month__day-today;
+  color: $text;
+}
+
+.month__color_circle {
+  background: $PRIMARY_LIGHT;
+}
+
+.month__color_circle-dark {
+  background: $PRIMARY_DARK;
+}

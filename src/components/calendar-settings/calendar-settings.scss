@@ -1,0 +1,46 @@
+@import "bloben-common/globals/theme.scss";
+
+.calendar-settings__container {
+  display: flex;
+  flex-direction: column;
+  min-height: 80px;
+  margin: 24px 24px 24px 24px;
+}
+
+.calendar-settings__item-container {
+  display: flex;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  padding: 16px 16px 16px 16px !important;
+  border-radius: 12px !important;
+}
+.calendar-settings__item-container-disabled {
+  @extend .calendar-settings__item-container;
+  pointer-events: none !important;
+}
+.calendar-settings__item-text {
+  color: $text;
+  font-size: 1.4rem !important;
+}
+.calendar-settings__item-text-dark {
+  @extend .calendar-settings__item-text;
+  color: $textDark;
+}
+.calendar-settings__item-text-disabled {
+  @extend .calendar-settings__item-text;
+  color: $gray;
+}
+.calendar-settings__item-text-disabled-dark {
+  @extend .calendar-settings__item-text-disabled;
+  color: $ICON_GRAY_DARK;
+}
+.calendar-settings__container-general {
+  width: 100%;
+  height: auto;
+  display: flex;
+  //border-top: solid 1px $border;
+}
+.calendarsettings__link {
+  display: flex;
+  width: 100%;
+}

@@ -1,0 +1,120 @@
+@import "bloben-common/globals/theme.scss";
+
+$BORDER_COLOR: $GRAY_300;
+$BORDER_DARK_COLOR: $GRAY_900;
+
+.one_day_wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.one_day__hours_wrapper {
+  position: fixed;
+  z-index: 2;
+  top: 30px;
+  left: 0;
+  //left: -24px;
+}
+.one_day__hours_container {
+  flex-direction: row;
+  display: flex;
+  height: 40px !important;
+  min-height: 40px;
+  width: 100%;
+
+}
+.one_day__hours_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  bottom: 20px;
+  flex-direction: column;
+  height: 100%;
+  z-index:2;
+  position: absolute;
+}
+.one_day__hours-line {
+  position: absolute;
+  left: 20px;
+  width: 100%;
+  height: 0.5px;
+  margin-top: 9px;
+  background: $BORDER_COLOR;
+  z-index: 2;
+}
+.one_day__hours-line-dark {
+  @extend .one_day__hours-line;
+  background: $BORDER_DARK_COLOR;
+}
+.one_day__hours_col {
+  display: flex;
+  width: 24px;
+  align-items: center;
+  justify-content: flex-start;
+  bottom: 20px;
+  flex-direction: column;
+}
+.one_day__hours_text {
+  position: absolute;
+  text-align-vertical: top;
+  z-index: 10;
+  color: $GRAY_600;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+  margin-left: 4px;
+}
+.one_day__hours_text-dark {
+  @extend .one_day__hours_text;
+  color: $GRAY_400;
+}
+
+.one-day__border-left {
+  border-left: solid 0.6px $BORDER_COLOR;
+}
+.one-day__border-left-dark {
+  @extend .one-day__border-left;
+  border-left: solid 0.6px $BORDER_DARK_COLOR;
+}
+
+.one_day__border--right--bottom {
+  align-self: center;
+  width: 100%;
+  height: 39px;
+  border-style: solid;
+  border-color: $BORDER_COLOR;
+  border-width: $borderRightBottom;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+}
+.one_day__border--right {
+  align-self: center;
+  width: 100%;
+  height: 39px;
+  border-style: solid;
+  border-color: $BORDER_COLOR;
+  border-width: $borderRight;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+}
+
+.one_day__border--right--bottom--dark {
+  @extend .one_day__border--right--bottom;
+  border-color: $borderLightDark;
+}
+.one_day__border--right--dark {
+  @extend .one_day__border--right;
+  border-color: $borderLightDark;
+}
+
+.one_day__time-now {
+  position: absolute;
+  height: 2px;
+  background: $PRIMARY_LIGHT;
+  z-index: 9;
+}

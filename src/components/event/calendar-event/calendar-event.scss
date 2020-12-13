@@ -1,0 +1,40 @@
+@import "bloben-common/globals/theme.scss";
+.event__wrapper {
+  position: absolute;
+  border-radius: 4px;
+  z-index: 9;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  overflow: hidden;
+  animation-name: event-load;
+  animation-duration: 0.6s;
+}
+
+.event__text {
+  color: $primaryText;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  padding-left: 6px;
+  opacity: 1;
+  overflow: hidden;
+}
+.event__text-dark {
+  @extend .event__text;
+  color: $primaryTextDark;
+}
+
+@keyframes event-load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

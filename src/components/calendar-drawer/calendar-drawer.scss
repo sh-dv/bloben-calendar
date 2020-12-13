@@ -1,0 +1,66 @@
+@import "bloben-common/globals/theme.scss";
+
+.calendar-drawer__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px 24px 16px;
+  justify-content: center;
+  @media (min-width: 750px) {
+    min-width: 214px;
+    width: 214px;
+    padding: 16px 16px 24px 16px;
+    justify-content: flex-start;
+    border-right: solid 0.5px $GRAY_300;
+    //margin-right: 10px;
+  }
+}
+
+.calendar-drawer__button {
+  width: 100%;
+  display: flex;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  //padding: 8px !important;
+  margin: 0!important;
+  padding-left: 14px !important;
+  border-radius: 8px !important;
+}
+.calendar-drawer__button-dark {
+  @extend .calendar-drawer__button;
+}
+.calendar-drawer__button-selected {
+  @extend .calendar-drawer__button;
+  background: $PRIMARY_LIGHT_OVERLAY !important;
+}
+.calendar-drawer__button-selected-dark {
+  @extend .calendar-drawer__button-selected;
+  background: $PRIMARY_DARK_OVERLAY !important;
+}
+.calendar-drawer__button-text {
+  font-size: 1.3rem;
+  color: $GRAY_800;
+  margin: 0;
+  padding: 0;
+}
+.calendar-drawer__button-text-dark {
+  @extend .calendar-drawer__button-text;
+  color: $GRAY_400;
+}
+.drawer-icon {
+  width: 20px !important;
+  margin-right: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+.drawer-icon-dark {
+  @extend .drawer-icon;
+  fill: $GRAY_400;
+}
+.drawer-subtitle {
+  font-size: 1.2rem;
+  margin: 16px;
+}
+.drawer-subtitle-dark {
+  @extend .drawer-subtitle;
+  color: $GRAY_300;
+}

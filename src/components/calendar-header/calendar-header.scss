@@ -1,0 +1,174 @@
+@import "bloben-common/globals/theme.scss";
+
+
+.header_calendar__wrapper {
+  border-radius: 8px;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 70px;
+  width: 100%;
+  //background-color: $modal;
+  box-shadow: 0 5px 5px -5px #333;
+  @media (max-width: 750px) {
+    border-radius: 0px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14);
+  }
+}
+.header_calendar__wrapper--tall {
+  @extend .header_calendar__wrapper;
+  height: 95px;
+}
+.header_calendar__wrapper--small {
+  @extend .header_calendar__wrapper;
+  height: 30px;
+}
+.header_calendar__wrapper--day {
+  @extend .header_calendar__wrapper;
+  flex-direction: row;
+}
+.header_calendar__wrapper--tall--day {
+  @extend .header_calendar__wrapper--tall;
+  flex-direction: row;
+}
+.header_calendar__wrapper--dark {
+  @extend .header_calendar__wrapper;
+  background-color: $MODAL_DARK;
+  box-shadow: none;
+  @media (max-width: 750px) {
+    border-radius: 0 0 8px 8px !important;
+  }
+}
+
+.header_calendar_days__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+
+.header_calendar_days__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header_calendar_days__col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.header_calendar_days__text__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 750px) {
+    align-items: flex-start;
+  }
+}
+.header_calendar_days__text__wrapper-dark {
+  @extend .header_calendar_days__text__wrapper;
+  background: $MODAL_DARK;
+}
+.header_calendar_days__text__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+}
+
+.header_calendar_days__text {
+  margin: 0;
+  padding: 1px;
+  font-size: 1.2rem;
+  align-self: center;
+  text-align: center;
+  color: $GRAY_500;
+}
+
+.header_calendar_days__text-circle-col {
+  height: 32px;
+  width: 32px;
+  padding: 0;
+  margin: 0;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text;
+}
+.header_calendar_days__text-circle-col-selected {
+  @extend .header_calendar_days__text-circle-col;
+  background: $text;
+}
+.header_calendar_days__text-circle-col-selected-dark {
+  @extend .header_calendar_days__text-circle-col;
+  background: $GRAY_200;
+}
+.header_calendar_days__text-circle-col-today {
+  @extend .header_calendar_days__text-circle-col;
+  background: $PRIMARY_LIGHT;
+}
+.header_calendar_days__text-circle-col-today-dark {
+  @extend .header_calendar_days__text-circle-col-today;
+  background: $PRIMARY_DARK;
+}
+.header_calendar_days__text-numeric {
+  margin: 0;
+  padding: 1px;
+  font-size: 1.5rem;
+  align-self: center;
+  text-align: center;
+  font-weight: 500;
+  color: $GRAY_800;
+}
+.header_calendar_days__text-numeric-dark {
+  @extend .header_calendar_days__text-numeric;
+  color: $GRAY_300;
+}
+.header_calendar_days__text-numeric-today {
+  @extend .header_calendar_days__text-numeric;
+  color: $textDark;
+}
+.header_calendar_days__text-numeric-today-dark {
+  @extend .header_calendar_days__text-numeric;
+  color: $text;
+}
+
+
+.event_header__container {
+  position: absolute;
+  border-radius: 4px;
+  z-index: 99;
+  height: 40;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  //margin-left: 1px;
+  //margin-right: 1px;
+}
+.event_header__text {
+  color: $primaryText;
+  font-size: 1rem;
+  margin: 0;
+  //padding-left: 2px;
+  //padding-right: 2px;
+  text-align: left;
+}
+.event_header__text--dark {
+  @extend .event_header__text;
+  color: $primaryTextDark;
+}

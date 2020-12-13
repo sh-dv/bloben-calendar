@@ -1,0 +1,28 @@
+@import "bloben-common/globals/theme.scss";
+
+.settings__wrapper {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 750px) {
+    flex-direction: row;
+  }
+}
+
+.settings__container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 16px 0 16px;
+  @media (min-width: 750px) {
+    width: 30%;
+  }
+}
+
+.settings__icon {
+  width: 20px;
+  height: 20px;
+  fill: $gray;
+}
+.settings__icon-dark {
+  @extend .settings__icon;
+  fill: $ICON_GRAY_DARK;
+}
